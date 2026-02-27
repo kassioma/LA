@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz · Lei nº 9.609/1998</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="label">Aula 06 · Direito Digital</div>
+    <h1>Lei nº <span>9.609/1998</span><br>Software & Propriedade Intelectual</h1>
+    <p class="subtitle">10 questões · Teste seu conhecimento</p>
+  </header>
+
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <span class="progress-label" id="progress-label">1 / 10</span>
+  </div>
+
+  <div id="quiz-screen">
+    <div class="card" id="question-card">
+      <div class="question-num" id="question-num"></div>
+      <div class="question-text" id="question-text"></div>
+      <div class="options" id="options"></div>
+      <button class="hint-toggle" id="hint-toggle" onclick="toggleHint()">
+        <span class="arrow">▶</span> Ver dica
+      </button>
+      <div class="hint-box" id="hint-box">
+        <div class="hint-label">↳ Dica</div>
+        <div id="hint-text"></div>
+      </div>
+      <button class="btn-next" id="btn-next">Próxima questão →</button>
+    </div>
+  </div>
+
+  <div id="result-screen" class="card">
+    <div class="question-num">Resultado Final</div>
+    <div class="score-wrap">
+      <div class="score-circle" id="score-circle">
+        <div class="score-number" id="score-number"></div>
+        <div class="score-sub">acertos</div>
+      </div>
+    </div>
+    <div class="result-title" id="result-title"></div>
+    <div class="result-msg" id="result-msg"></div>
+    <button class="btn-restart" onclick="restart()">↺ Reiniciar quiz</button>
+
+    <div class="summary" id="summary"></div>
+  </div>
+</div>
+
+<script src="questions.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
